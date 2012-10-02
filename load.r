@@ -1,5 +1,8 @@
 library(XLConnect)
 library(stringr)
+library(plyr)
+library(reshape2)
+library(lubridate)
 
 # baseurl
 burl <- "http://www.gks.ru/free_doc/doc_2012/monitor/"
@@ -10,7 +13,7 @@ xlfname <- '005-013 индекс промышленного производст
 xlfext <- 'xls'
 xlffullname <- str_c(xlfname, xlfext, sep = '.')
 sheetname <- "к пред. месяцу"
-rfirst <- 4
+rfirst <- 3
 rlast <- 96 # 0 if try to autodetect
 cfirst <- 1
 clast <- 0
